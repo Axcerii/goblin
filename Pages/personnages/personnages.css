@@ -1,0 +1,411 @@
+body{
+    margin-top: 8%;
+}
+
+h1{
+    color: var(--white);
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 1.8em;
+}
+
+
+.mainZoneCard{
+    /*box-shadow: 10px 5px 5px var(--black) ;*/
+
+    margin: 12px auto 0px 4%;
+
+    width: 90%;
+    height: 66.6vh;
+
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1em;
+/*     border-top: var(--black) 1px solid;
+    border-left: var(--black) 1px solid; */
+    overflow-x: hidden;
+    padding-right: 5px;
+}
+
+.card{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    /*border: solid var(--thirdColor) 2px;*/
+    flex: 1 0 20%;
+    background: var(--mainColor);
+    max-height: 100%;
+    transition: 1000ms all ease-out;
+    background: transparent;
+
+    z-index: 501;
+    max-width: 512px;
+}
+
+.card button{
+    position: relative;
+}
+
+.cadre-card{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 500;
+}
+
+.card button >p{
+    position: absolute;
+    color: var(--white);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    left: 50%;
+    top: 80%;
+    z-index: 500;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 500ms all ease-out;
+    font-family: var(--mainFont);
+}
+
+.card img{
+    width: 100%;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.img-card-container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.card .img-card{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.clip-path{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(2% 2%, 13% 3%, 20% 2%, 28% 4%, 32% 5%, 40% 6%, 48% 4%, 52% 5%, 59% 4%, 68% 5%, 76% 4%, 89% 4%, 96% 3%, 98% 11%, 95% 18%, 95% 22%, 93% 30%, 95% 37%, 97% 49%, 95% 57%, 97% 67%, 95% 76%, 96% 90%, 95% 94%, 88% 95%, 78% 95%, 71% 98%, 63% 98%, 58% 96%, 50% 98%, 38% 98%, 33% 99%, 28% 97%, 20% 98%, 7% 89%, 3% 90%, 3% 72%, 5% 68%, 2% 61%, 5% 52%, 3% 45%, 4% 36%, 4% 30%, 6% 22%, 3% 14%);
+}
+
+.blackscreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    z-index: 499;
+    transition: 500ms all ease-out;
+    clip-path: polygon(2% 2%, 13% 3%, 20% 2%, 28% 4%, 32% 5%, 40% 6%, 48% 4%, 52% 5%, 59% 4%, 68% 5%, 76% 4%, 89% 4%, 96% 3%, 98% 11%, 95% 18%, 95% 22%, 93% 30%, 95% 37%, 97% 49%, 95% 57%, 97% 67%, 95% 76%, 96% 90%, 95% 94%, 88% 95%, 78% 95%, 71% 98%, 63% 98%, 58% 96%, 50% 98%, 38% 98%, 33% 99%, 28% 97%, 20% 98%, 7% 89%, 3% 90%, 3% 72%, 5% 68%, 2% 61%, 5% 52%, 3% 45%, 4% 36%, 4% 30%, 6% 22%, 3% 14%);
+}
+button:hover > .blackscreen{
+    opacity: 1;
+    --_i: 100%;
+    color: var(--thirdColor);
+    transition: .3s, -webkit-mask-size .3s .3s;
+}
+
+button:hover > p{
+    opacity: 1;
+}
+
+
+.ethnie{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    margin-top: 2em;
+    filter: invert(81%) sepia(45%) saturate(3102%) hue-rotate(160deg) brightness(106%) contrast(99%);
+    z-index: 500;
+    opacity: 0;
+    transition: 500ms all ease-out;
+}
+
+button:hover > .ethnie{
+    opacity: 0.5;
+}
+
+.card button{
+    display: flex;
+    margin: auto auto;
+    background: none;
+    border : none;
+    padding: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+#search_bar{
+    display: flex;
+    width: 70%;
+    background: var(--thirdColor);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    border: var(--mainColor) solid 2px;
+    height: 2em;
+    border-radius: 0.5em;
+}
+
+#search_bar::placeholder{
+    color: var(--black);
+    opacity: 0.4;
+}
+
+.mobile-name{
+    display: none;
+}
+
+.partie-superieur{
+    display: flex;
+    width: 70%;
+
+    margin: auto auto;
+}
+
+
+.info-option{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+
+.label-categorie{
+    display: flex;
+    width: 50%;
+    border: 2px solid var(--thirdColor);
+    background: rgba(0,0,0,0.6);
+    margin-left: 10%;
+    padding: 1em 0;
+
+    border-radius: 1em;
+}
+
+.categorie{
+    display: flex;
+    margin: auto;
+    width: 60%;
+    max-height: max-content;
+}
+
+.label-categorie:hover{
+    cursor: pointer;
+}
+
+.radio-bouton{
+    -webkit-appearance: none;
+    -moz-appearance: none;   
+    appearance: none;
+    display: none;
+}
+
+.bestiaire-img{
+    display: flex;
+    margin: auto auto;
+    width: 60%;
+    filter: invert(100%);
+    transition: all ease-in-out 100ms;
+}
+
+.radio-personnages-img{
+    display: flex;
+    margin: auto auto;
+    width: 40%;
+    filter: invert(100%);
+    transition: all ease-in-out 100ms;
+}
+
+.label-categorie:hover > img{
+    filter: invert(81%) sepia(45%) saturate(3102%) hue-rotate(160deg) brightness(106%) contrast(99%);
+}
+
+.radio-bouton:checked ~ img{
+    filter: invert(51%) sepia(38%) saturate(3487%) hue-rotate(333deg) brightness(103%) contrast(99%);
+}
+
+.mortLogo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    filter: invert(12%) sepia(33%) saturate(7486%) hue-rotate(357deg) brightness(101%) contrast(124%);
+}
+
+.mortAssombrir{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+}
+
+/* Descendance rangement */
+
+.mainZone{
+    width: 75%;
+    display: flex;
+    margin: auto auto;
+}
+
+.descendance{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+    row-gap: 1em;
+
+    width: 9%;
+    padding: 2em;
+}
+
+.cards{
+    width: 100%;
+}
+
+.label-descendance{
+    width: 100%;
+    height: auto;
+    border: solid 2px var(--thirdColor);
+    cursor: pointer;
+    background: rgba(0,0,0,0.6);
+    padding: 0.5em;
+}
+
+/* Checkbox invisible */
+
+.label-descendance > input{
+    display: none;
+}
+
+/* Image des labels en SVG */
+
+.label-descendance > img{
+    display: flex;
+    margin: auto auto;
+    width: 100%;
+    filter: invert(91%) sepia(65%) saturate(0%) hue-rotate(15deg) brightness(107%) contrast(103%);
+
+    transition: all 300ms ease-in-out;
+}
+
+.label-descendance:hover > img{
+    filter: invert(49%) sepia(40%) saturate(584%) hue-rotate(5deg) brightness(97%) contrast(89%);
+}
+
+.label-descendance > input:checked + img{
+    filter: invert(93%) sepia(7%) saturate(1873%) hue-rotate(58deg) brightness(100%) contrast(104%);
+}
+
+.group_3{
+    border: 4px solid rgb(76, 146, 99);
+    box-sizing: border-box;
+}
+
+.group_4{
+    border: 4px solid rgb(59, 69, 158);
+    box-sizing: border-box;
+}
+
+.group_5{
+    border: 4px solid rgb(150, 59, 158);
+    box-sizing: border-box;
+}
+
+.svg-allié{
+    filter: invert(87%) sepia(18%) saturate(1128%) hue-rotate(67deg) brightness(106%) contrast(101%);
+}
+
+.svg-autre{
+    filter: invert(100%);
+}
+
+.svg-black{
+    filter: invert(0%);
+}
+
+.svg-ennemi{
+    filter: invert(45%) sepia(84%) saturate(1962%) hue-rotate(328deg) brightness(100%) contrast(108%);
+}
+
+@media screen and (max-width: 500px) {
+    html{
+        overflow-y: auto;
+    }
+
+    h1{
+        display: none;
+    }
+
+    #search_bar{
+        width: 70%;
+    }
+
+    .card{
+        width: 40%;
+        margin: 12px 5% 5% 5%;
+        flex: 1 0 30%;
+    }
+    .card img{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .mainZoneCard{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 12px auto 0px auto;
+        width: 66.6%;
+    }
+
+    .blackscreen{
+        display: none;
+    }
+
+    .ethnie{
+        display: none;
+    }
+
+    .Name{
+        display: none;
+    }
+    .mobile-name{
+        display: block;
+        color: var(--white);
+        font-family: var(--mainFont);
+        text-align: center;
+    }
+
+    .partie-superieur{
+        flex-direction: column;
+    }
+
+    .info-option{
+        width: 100%;
+    }
+
+    .categorie{
+        width: 100%;
+    }
+
+    .label-categorie{
+        margin-left: 0;
+        margin-right: 10%;
+    }
+
+    .descendance{
+        display: none;
+    }
+}

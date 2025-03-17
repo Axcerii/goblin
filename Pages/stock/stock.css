@@ -1,0 +1,207 @@
+body{
+    margin-top: 7.5%;
+}
+
+h1{
+    text-align: center;
+    color: var(--white);
+    font-family: var(--mainFont);
+    font-size: 4em;
+    margin-bottom: 1em;
+}
+
+h2{
+    text-align: center;
+    color: var(--white);
+    font-family: var(--mainFont);
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.rarete-1{
+    filter: invert(100%);
+}
+
+.rarete-2{
+    filter: invert(80%) sepia(75%) saturate(1784%) hue-rotate(58deg) brightness(120%) contrast(98%);
+}
+
+.rarete-3{
+    filter: invert(88%) sepia(25%) saturate(5165%) hue-rotate(157deg) brightness(102%) contrast(99%);
+}
+
+.rarete-4{
+    filter: invert(89%) sepia(57%) saturate(589%) hue-rotate(348deg) brightness(101%) contrast(98%);
+}
+
+.rarete-5{
+    filter: invert(40%) sepia(45%) saturate(5216%) hue-rotate(338deg) brightness(110%) contrast(98%);
+}
+
+.p-rarete-1{
+    color: var(--white);
+}
+
+.p-rarete-2{
+    color: #46fc46;
+}
+
+.p-rarete-3{
+    color: #45e0fe;
+}
+
+.p-rarete-4{
+    color: #fcf346;
+}
+
+.p-rarete-5{
+    color: #fc4646;
+}
+
+/* 
+<div class="objets-container">
+    <div class='case-objets'>
+        <img class='objet-vitre' src="Pages/profil/images/Vitrine.png" alt="Vitrine">
+        <p class='nom-objets'>Gourdin en Bois</p>
+        <img class='image-vitrine rarete-1' src="Commun/images/Categories/Arme.svg" alt="Vitrine">
+        <div class='objet-poids'>
+            <img src="Pages/profil/images/Poids.svg" alt="Poids">
+        </div>
+        <div class='objets-popup'>
+            <p>Gourdin en Bois</p>
+            <p class='p-rarete-1'>Commun</p>
+            <p>1</p>
+            <p class='description-objets'>Super arme, vraiment très utile pour faire un feu</p>
+        </div>
+    </div>
+</div>
+*/
+
+.objets-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto auto 2rem auto;
+    border-bottom: var(--white) 2px solid;
+    padding-bottom: 2rem;
+}
+
+.case-objets{
+    width: 9.27rem;
+    height: 15rem;
+    margin: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.case-objets:hover{
+    cursor: help;
+    transform: scale(1);
+}
+
+.nom-objets{
+    color: var(--white);
+    font-family: var(--mainFont);
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 2;
+}
+
+.objets-popup{
+    font-family: var(--mainFont);
+    color: var(--white);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 1em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.objets-popup > p{
+    font-size: 1.2em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.case-objets:hover > .objets-popup{
+    opacity: 1;
+}
+
+.objet-vitre{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.objet-poids{
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+    width: 80%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.objet-poids > img{
+    width: 30%;
+    height: auto;
+}
+
+.p-poids{
+    position: absolute;
+    color: var(--black);
+    font-family: var(--mainFont);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    right: 14%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.description-objets{
+    text-align: justify;
+}
+
+.image-container{
+    width: 100%;
+    object-fit: cover;    
+}
+
+.image-container > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.objets-quantity{
+    position: absolute;
+    bottom : 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--white);
+    font-family: var(--mainFont);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0 1rem;
+}

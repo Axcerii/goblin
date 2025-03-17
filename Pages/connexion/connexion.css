@@ -1,0 +1,78 @@
+body{
+    margin-top: 10%;
+    font-family: var(--mainFont);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: solid 4px var(--thirdColor);
+    width: 40%;
+    margin : 2em auto 0px auto;
+    border-radius: 2px;
+}
+
+label{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.label_input{
+    width: 100%;
+    margin: 1em auto 1em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputText{
+    width: 60%;
+    margin: 1.5em auto;
+    height: 1.5em;
+    background: var(--black);
+    border: var(--thirdColor) solid 2px;
+    color: var(--white);
+
+    font-size: 1.5em;
+    font-family: var(--mainFont);
+}
+
+button{
+    width: 20%;
+    margin: 2em auto 2em 20%;
+    background: var(--thirdColor);
+    color: var(--black);
+    border: var(--white) solid 2px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.identifiant-error{
+    color: red;
+    width: 40%;
+    margin: 1em auto;
+    font-size: 2em;
+}
+
+
+
+@media (max-width: 480px) {
+
+    button{
+        width: 80%;
+        margin: 1em auto;
+    }
+
+    form{
+        width: 90%;
+    }
+    .inputText{
+        width: 90%;
+    }
+
+    .invitation{
+        width: 90%;
+    }
+  }

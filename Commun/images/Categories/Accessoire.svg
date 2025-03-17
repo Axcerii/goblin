@@ -1,0 +1,17 @@
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.9 645.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 50px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="244.4" cy="401.1" r="219.4"/>
+  <g>
+    <polyline class="cls-1" points="243.6 181.7 337.3 55.1 337.3 55.1 290.5 25 243.6 25"/>
+    <polyline class="cls-1" points="244.4 181.7 150.8 55.1 150.8 55.1 197.6 25 244.4 25"/>
+  </g>
+</svg>
